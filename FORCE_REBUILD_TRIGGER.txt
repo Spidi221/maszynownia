@@ -1,0 +1,25 @@
+🚨 CACHE INVALIDATION TRIGGER 🚨
+
+BUILD_ID: maszynownia-2025-09-05-v3-final
+TIMESTAMP: 2025-09-05 14:30:00 CET
+CACHE_VERSION: 3.0.0
+
+This file forces a complete rebuild when changed.
+Netlify/Replit should detect this change and rebuild everything.
+
+Previous attempts:
+- v1: NUCLEAR CACHE BUST
+- v2: FORCE DEPLOY  
+- v3: ULTIMATE CACHE INVALIDATION ⚡
+
+Changes made:
+✅ Added timestamp to all asset filenames in vite.config.ts
+✅ Updated netlify.toml with cache headers
+✅ Created .env with cache bust variables  
+✅ Force rebuild trigger file created
+
+If you still see old content after deployment, try:
+1. Hard refresh (Ctrl+Shift+R)
+2. Clear browser cache completely
+3. Try incognito/private window
+4. Wait 2-3 minutes for CDN propagation

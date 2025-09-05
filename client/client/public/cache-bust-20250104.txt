@@ -1,0 +1,3 @@
+NETLIFY CACHE BUST - 2025-01-04
+This file forces Netlify to rebuild public assets.
+Logo positioning fix - translateY(-1rem) for Strefa logo.

@@ -1,0 +1,766 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0 0% 100%);
+  --foreground: hsl(210 25% 7.8431%);
+  --card: hsl(180 6.6667% 97.0588%);
+  --card-foreground: hsl(210 25% 7.8431%);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(210 25% 7.8431%);
+  --primary: hsl(203.8863 88.2845% 53.1373%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(210 25% 7.8431%);
+  --secondary-foreground: hsl(0 0% 100%);
+  --muted: hsl(240 1.9608% 90%);
+  --muted-foreground: hsl(210 25% 7.8431%);
+  --accent: hsl(211.5789 51.3514% 92.7451%);
+  --accent-foreground: hsl(203.8863 88.2845% 53.1373%);
+  --destructive: hsl(356.3033 90.5579% 54.3137%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --border: hsl(201.4286 30.4348% 90.9804%);
+  --input: hsl(200 23.0769% 97.4510%);
+  --ring: hsl(202.8169 89.1213% 53.1373%);
+  --chart-1: hsl(203.8863 88.2845% 53.1373%);
+  --chart-2: hsl(159.7826 100% 36.0784%);
+  --chart-3: hsl(42.0290 92.8251% 56.2745%);
+  --chart-4: hsl(147.1429 78.5047% 41.9608%);
+  --chart-5: hsl(341.4894 75.2000% 50.9804%);
+  --sidebar: hsl(180 6.6667% 97.0588%);
+  --sidebar-foreground: hsl(210 25% 7.8431%);
+  --sidebar-primary: hsl(203.8863 88.2845% 53.1373%);
+  --sidebar-primary-foreground: hsl(0 0% 100%);
+  --sidebar-accent: hsl(211.5789 51.3514% 92.7451%);
+  --sidebar-accent-foreground: hsl(203.8863 88.2845% 53.1373%);
+  --sidebar-border: hsl(205.0000 25.0000% 90.5882%);
+  --sidebar-ring: hsl(202.8169 89.1213% 53.1373%);
+  --font-sans: Inter, sans-serif;
+  --radius: 1.3rem;
+  --tracking-normal: 0em;
+  --spacing: 0.25rem;
+  
+  /* Maszynownia Premium Brand Colors (Tailwind Stone) */
+  --maszynownia-bg: #0c0a09;
+  --maszynownia-text: #ffffff;
+  --maszynownia-gold: #D9A748;
+  --maszynownia-text-muted: #757575;
+  
+  /* EMS Colors (Premium Gold) */
+  --ems-dark: #0c0a09;
+  --ems-gold: #D9A748;
+  --ems-gold-light: #E6B955;
+  --ems-text: #ffffff;
+  --ems-text-secondary: #ffffff;
+  --ems-text-muted: #757575;
+  
+  /* Gym Colors (Family Friendly Yellow/Orange) */
+  --gym-dark: #0c0a09;
+  --gym-orange: #eab308;
+  --gym-orange-light: #fbbf24;
+  --gym-text: #f9fafb;
+  --gym-text-secondary: #f9fafb;
+  --gym-text-muted: #0c0a09;
+  --gym-heading: #0c0a09;
+}
+
+.dark {
+  --background: hsl(0 0% 0%);
+  --foreground: hsl(200 6.6667% 91.1765%);
+  --card: hsl(228 9.8039% 10%);
+  --card-foreground: hsl(0 0% 85.0980%);
+  --popover: hsl(0 0% 0%);
+  --popover-foreground: hsl(200 6.6667% 91.1765%);
+  --primary: hsl(203.7736 87.6033% 52.5490%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(195.0000 15.3846% 94.9020%);
+  --secondary-foreground: hsl(210 25% 7.8431%);
+  --muted: hsl(0 0% 9.4118%);
+  --muted-foreground: hsl(210 3.3898% 46.2745%);
+  --accent: hsl(205.7143 70% 7.8431%);
+  --accent-foreground: hsl(203.7736 87.6033% 52.5490%);
+  --destructive: hsl(356.3033 90.5579% 54.3137%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --border: hsl(210 5.2632% 14.9020%);
+  --input: hsl(207.6923 27.6596% 18.4314%);
+  --ring: hsl(202.8169 89.1213% 53.1373%);
+  --chart-1: hsl(203.8863 88.2845% 53.1373%);
+  --chart-2: hsl(159.7826 100% 36.0784%);
+  --chart-3: hsl(42.0290 92.8251% 56.2745%);
+  --chart-4: hsl(147.1429 78.5047% 41.9608%);
+  --chart-5: hsl(341.4894 75.2000% 50.9804%);
+  --sidebar: hsl(228 9.8039% 10%);
+  --sidebar-foreground: hsl(0 0% 85.0980%);
+  --sidebar-primary: hsl(202.8169 89.1213% 53.1373%);
+  --sidebar-primary-foreground: hsl(0 0% 100%);
+  --sidebar-accent: hsl(205.7143 70% 7.8431%);
+  --sidebar-accent-foreground: hsl(203.7736 87.6033% 52.5490%);
+  --sidebar-border: hsl(205.7143 15.7895% 26.0784%);
+  --sidebar-ring: hsl(202.8169 89.1213% 53.1373%);
+  --font-sans: Inter, sans-serif;
+  --radius: 1.3rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    font: 400 16px / 1.6em "Inter", sans-serif;
+    padding: 0;
+    margin: 0;
+    color: #ffffff;
+    background-color: #0c0a09;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+    box-sizing: border-box;
+  }
+  
+  ::selection {
+    background: #D9A748;
+    color: #ffffff;
+    text-shadow: 0 0 8px rgba(217, 167, 72, 0.4);
+    text-decoration: none;
+  }
+  
+  ::-moz-selection {
+    background: #D9A748;
+    color: #ffffff;
+    text-shadow: 0 0 8px rgba(217, 167, 72, 0.4);
+    text-decoration: none;
+  }
+  
+  * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}
+
+@layer components {
+  /* Split Screen Layout */
+  .split-screen {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+  }
+  
+  /* Desktop - vertical line */
+  .split-screen::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(0deg, transparent 0%, rgba(217, 167, 72, 0.2) 20%, rgba(234, 179, 8, 0.2) 80%, transparent 100%);
+    box-shadow: 0 0 20px rgba(217, 167, 72, 0.1), 0 0 40px rgba(234, 179, 8, 0.1);
+    z-index: 10;
+  }
+  
+  /* Mobile - horizontal line */
+  @media (max-width: 767px) {
+    .split-screen::before {
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent 0%, rgba(249, 250, 251, 0.4) 20%, rgba(249, 250, 251, 0.4) 80%, transparent 100%);
+      box-shadow: 0 0 15px rgba(217, 167, 72, 0.2), 0 0 30px rgba(249, 250, 251, 0.2);
+      z-index: 20;
+    }
+  }
+  
+  .split-panel {
+    width: 50vw;
+    min-width: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: visible;
+  }
+  
+  /* Landing pages should allow scrolling */
+  .landing-page {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  
+  /* Staggered fade-in animations */
+  .split-panel > div {
+    animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
+  .ems-panel > div {
+    animation-delay: 0.2s;
+  }
+  
+  .gym-panel > div {
+    animation-delay: 0.4s;
+  }
+  
+  /* Mobile Layout */
+  @media (max-width: 767px) {
+    .split-screen {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      width: 100vw;
+      gap: 0;
+    }
+    
+    .split-panel {
+      width: 100vw;
+      height: 50vh;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    /* Mobile content layout - optimize for 50vh panels */
+    .split-panel .h-2\/5 {
+      height: 40%;
+      flex-shrink: 0;
+    }
+    
+    .split-panel .h-3\/5 {
+      height: 60%;
+      flex-shrink: 0;
+    }
+    
+    /* Mobile-optimized spacing and sizing */
+    .gym-locations-border {
+      height: auto;
+      min-height: 3rem;
+      gap: 0.25rem;
+      padding-top: 0.5rem;
+    }
+    
+    .ems-location-border {
+      height: auto;
+      min-height: 2rem;
+      padding-top: 0.5rem;
+    }
+    
+    /* Override button and text styles for mobile */
+    .btn-ems, .btn-gym {
+      font-size: 1rem !important;
+      padding: 0.75rem 1.5rem !important;
+      margin-bottom: 0.75rem !important;
+      font-weight: 600;
+      border-radius: 0.5rem !important;
+    }
+    
+    .ems-subtitle, .gym-subtitle {
+      font-size: 0.875rem !important;
+      margin-bottom: 0.5rem !important;
+      line-height: 1.3 !important;
+      font-weight: 400;
+    }
+    
+    .ems-location, .gym-location {
+      font-size: 0.75rem !important;
+      line-height: 1.4 !important;
+    }
+    
+  }
+
+  /* EMS Styles (Clean Premium) */
+  .ems-panel {
+    background: linear-gradient(to bottom, #000000 0%, #0c0a09 40%);
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+  }
+  
+  .ems-panel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(217, 167, 72, 0.03) 0%, rgba(217, 167, 72, 0.08) 50%, rgba(217, 167, 72, 0.03) 100%);
+    opacity: 0;
+    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+  }
+  
+  .ems-panel:hover::before {
+    opacity: 1;
+  }
+  
+  .ems-panel:hover {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.98) 0%, rgba(12, 10, 9, 0.95) 40%);
+  }
+  
+  .glow-ems {
+    /* Removed text-shadow for clean look */
+  }
+  
+  .gradient-overlay-ems {
+    /* Removed gradient for clean look */
+  }
+
+  /* Gym Styles (Family Friendly Orange) */
+  .gym-panel {
+    background: linear-gradient(to bottom, #d97706 0%, #b45309 40%);
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+  }
+  
+  .gym-panel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(217, 119, 6, 0.03) 0%, rgba(245, 158, 11, 0.08) 50%, rgba(217, 119, 6, 0.03) 100%);
+    opacity: 0;
+    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+  }
+  
+  .gym-panel:hover::before {
+    opacity: 1;
+  }
+  
+  .gym-panel:hover {
+    background: linear-gradient(to bottom, rgba(217, 119, 6, 0.98) 0%, rgba(180, 83, 9, 0.95) 40%);
+  }
+  
+  .glow-gym {
+    /* Removed text-shadow for clean look */
+  }
+  
+  .gradient-overlay-gym {
+    /* Removed gradient for clean look */
+  }
+  
+  
+  
+  .ems-subtitle {
+    font-family: "Inter", sans-serif;
+    font-size: 1.375rem;
+    font-weight: 400;
+    margin-bottom: 2.5rem;
+    color: var(--ems-text);
+    line-height: 1.5;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, var(--ems-text) 0%, var(--ems-gold-light) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+  }
+  
+  .ems-subtitle::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: 80%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent 0%, var(--ems-gold) 50%, transparent 100%);
+    transform-origin: center;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .ems-panel:hover .ems-subtitle::after {
+    transform: translateX(-50%) scaleX(1);
+  }
+  
+  .ems-location-border {
+    border-top: 1px solid var(--ems-gold);
+    border-opacity: 0.3;
+    padding-top: 1.25rem;
+    height: 4rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+  }
+  
+  .ems-location-border::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, var(--ems-gold) 50%, transparent 100%);
+    box-shadow: 0 0 8px rgba(217, 167, 72, 0.3);
+  }
+  
+  .ems-location {
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--ems-text-muted);
+  }
+  
+  
+  
+  .gym-subtitle {
+    font-family: "Inter", sans-serif;
+    font-size: 1.375rem;
+    font-weight: 400;
+    margin-bottom: 2.5rem;
+    color: var(--gym-text);
+    line-height: 1.5;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #f9fafb 0%, #eab308 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+  }
+  
+  .gym-subtitle::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: 80%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent 0%, var(--gym-orange) 50%, transparent 100%);
+    transform-origin: center;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .gym-panel:hover .gym-subtitle::after {
+    transform: translateX(-50%) scaleX(1);
+  }
+  
+  .gym-locations-border {
+    border-top: 1px solid var(--gym-orange);
+    border-opacity: 0.3;
+    padding-top: 1rem;
+    height: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+  }
+  
+  .gym-locations-border::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, var(--gym-orange) 50%, transparent 100%);
+    box-shadow: 0 0 8px rgba(255, 140, 66, 0.3);
+  }
+  
+  .gym-heading {
+    background: linear-gradient(135deg, #f9fafb 0%, #eab308 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 2px 4px rgba(12, 10, 9, 0.1);
+    position: relative;
+    font-weight: 700;
+  }
+  
+  /* Fallback for browsers that don't support background-clip: text */
+  .gym-heading::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    color: #0c0a09;
+    text-shadow: none;
+  }
+  
+  .gym-location {
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #f9fafb;
+    line-height: 1.2;
+  }
+
+  /* Button Styles (Premium Maszynownia Enhanced) */
+  .btn-ems {
+    font-family: "Inter", sans-serif;
+    background-color: var(--ems-gold);
+    color: #000000;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 0.375rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 2.5rem;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(217, 167, 72, 0.1);
+  }
+  
+  .btn-ems:hover {
+    background-color: var(--ems-gold-light);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(217, 167, 72, 0.4), 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .btn-gym {
+    font-family: "Inter", sans-serif;
+    background-color: #eab308;
+    color: var(--gym-dark);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 0.375rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 2.5rem;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(234, 179, 8, 0.2);
+  }
+  
+  .btn-gym:hover {
+    background-color: #fbbf24;
+    color: var(--gym-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(234, 179, 8, 0.4), 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Logo hover effects (subtle premium) */
+  .logo-hover {
+    opacity: 0.8;
+    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    filter: blur(0.5px);
+    animation: logoSharpening 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    object-fit: contain;
+    object-position: center;
+  }
+  
+  .logo-hover:hover {
+    opacity: 1.0;
+    filter: blur(0px);
+  }
+  
+  /* NUCLEAR CACHE BUST 2025-01-04 - Netlify fix */
+  .logo-strefa-fixed-20250104 {
+    transform: translateY(-1rem) !important;
+    will-change: transform;
+    /* Enhanced visibility on orange background */
+    filter: drop-shadow(0 4px 8px rgba(12, 10, 9, 0.3)) drop-shadow(0 0 16px rgba(249, 250, 251, 0.4));
+    transition: filter 0.3s ease;
+  }
+  
+  .logo-strefa-fixed-20250104:hover {
+    filter: drop-shadow(0 6px 12px rgba(12, 10, 9, 0.4)) drop-shadow(0 0 24px rgba(249, 250, 251, 0.6));
+  }
+}
+
+@layer utilities {
+  /* Animations */
+  @keyframes glow-pulse {
+    from { 
+      box-shadow: 0 0 20px hsl(51 100% 60% / 0.3); 
+    }
+    to { 
+      box-shadow: 0 0 30px hsl(51 100% 60% / 0.6); 
+    }
+  }
+  
+  @keyframes float {
+    0%, 100% { 
+      transform: translateY(0px); 
+    }
+    50% { 
+      transform: translateY(-5px); 
+    }
+  }
+  
+  .animate-glow-pulse {
+    animation: glow-pulse 2s ease-in-out infinite alternate;
+  }
+  
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes logoSharpening {
+    0% {
+      filter: blur(2px);
+      opacity: 0.6;
+    }
+    50% {
+      filter: blur(1px);
+      opacity: 0.7;
+    }
+    100% {
+      filter: blur(0px);
+      opacity: 0.8;
+    }
+  }
+  
+  /* Mobile optimizations for landing pages */
+  @media (max-width: 768px) {
+    /* Landing page navigation */
+    .landing-page nav .hidden {
+      display: none !important;
+    }
+    
+    /* Hero sections */
+    .landing-page section {
+      padding: 3rem 1rem;
+    }
+    
+    /* Hero titles */
+    .landing-page h1 {
+      font-size: 2.5rem !important;
+      line-height: 1.2;
+    }
+    
+    /* Grid adjustments */
+    .landing-page .grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    
+    /* Cards and buttons */
+    .landing-page .bg-stone-800\/50,
+    .landing-page .bg-stone-800\/30 {
+      padding: 1.5rem;
+    }
+    
+    /* Contact buttons full width on mobile */
+    .landing-page .space-y-4 > * {
+      width: 100%;
+    }
+    
+    /* Tab navigation for mobile */
+    .landing-page .lg\:col-span-1 {
+      order: 2;
+    }
+    
+    .landing-page .lg\:col-span-3 {
+      order: 1;
+    }
+  }
+}
+
+/* EMS Specific Typography - Quicksand Light 300 for headings */
+.ems-heading {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 300;
+}
+
+.ems-title {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 300;
+}
+
+.ems-section-title {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 300;
+}
+
+/* Enhanced Mobile Responsiveness */
+@media (max-width: 430px) {
+  .split-screen {
+    height: 100vh !important;
+  }
+  
+  .split-panel {
+    height: 50vh !important;
+    padding: 0.75rem !important;
+  }
+  
+  .split-panel .max-w-xl {
+    max-width: 100%;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  
+  .btn-ems,
+  .btn-gym {
+    padding: 0.5rem 1rem !important;
+    font-size: 0.85rem !important;
+    margin-bottom: 0.6rem !important;
+  }
+  
+  .ems-subtitle,
+  .gym-subtitle {
+    font-size: 0.75rem !important;
+    margin-bottom: 0.4rem !important;
+    line-height: 1.2 !important;
+  }
+  
+  .ems-location-border,
+  .gym-locations-border {
+    padding-top: 0.4rem !important;
+    min-height: 1.8rem !important;
+  }
+  
+  .gym-location {
+    font-size: 0.7rem !important;
+    line-height: 1.1 !important;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 360px) {
+  .split-screen {
+    height: 100vh !important;
+  }
+  
+  .split-panel {
+    height: 50vh !important;
+    padding: 0.5rem !important;
+  }
+  
+  .btn-ems,
+  .btn-gym {
+    padding: 0.3rem 0.6rem !important;
+    font-size: 0.75rem !important;
+  }
+  
+  .ems-subtitle,
+  .gym-subtitle {
+    font-size: 0.65rem !important;
+  }
+}

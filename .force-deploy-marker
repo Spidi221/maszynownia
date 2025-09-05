@@ -1,0 +1,14 @@
+FORCE DEPLOY MARKER - 2025-01-04 02:29
+
+This file forces platforms like Netlify/Replit to recognize 
+a new deploy is needed and pull fresh code from GitHub.
+
+Commit hash with logo fix: 7248fb7
+Commit hash with gallery: 3bb7b1d
+
+LOGO FIX SHOULD BE VISIBLE:
+- .logo-strefa-fixed-20250104 class in CSS
+- transform: translateY(-1rem) !important
+- Applied to Strefa Gimnastyki logo on home page
+
+If you're still seeing old version, the platform has aggressive caching!
