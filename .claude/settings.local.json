@@ -193,7 +193,9 @@
       "Read(/C:\\Users\\User\\Documents\\Agencja AI\\Strony WWW\\maszynownia-website\\client\\client\\public/**)",
       "Read(/C:\\Users\\User\\Documents\\Agencja AI\\Strony WWW\\maszynownia-website/**)",
       "Read(/C:\\Users\\User\\Documents\\Agencja AI\\Strony WWW\\maszynownia-website/**)",
-      "Bash(git pull:*)"
+      "Bash(git pull:*)",
+      "Bash(git checkout:*)",
+      "Bash(git merge:*)"
     ],
     "deny": [],
     "ask": []

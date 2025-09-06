@@ -228,7 +228,7 @@ export default function StrefaGimnastyki() {
       {/* Grupy wiekowe */}
       <section id="zajecia" className="py-20 px-6 bg-yellow-100/40">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-6xl font-bold text-center mb-16 transition-all duration-300 hover:scale-105 cursor-default" style={{ color: '#1E1B18' }}>Grupy wiekowe</h2>
+          <h2 className="text-5xl md:text-6xl font-bold text-center mb-16 transition-all duration-300 hover:scale-105 cursor-default" style={{ color: '#1E1B18' }}>Grupy wiekowe</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white/80 backdrop-blur-sm p-8 rounded-xl border border-orange-200/50 hover:border-orange-300/60 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-[1.02] hover:-translate-y-1">
               <Users className="h-12 w-12 text-gym-orange mb-6 transition-all duration-300 hover:scale-110 hover:rotate-3" />
@@ -261,7 +261,7 @@ export default function StrefaGimnastyki() {
       {/* Lokalizacje i harmonogram */}
       <section id="lokalizacje" className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-6xl font-bold text-center mb-16 transition-all duration-300 hover:scale-105 cursor-default" style={{ color: '#1E1B18' }}>Lokalizacje i harmonogram</h2>
+          <h2 className="text-5xl md:text-6xl font-bold text-center mb-16 transition-all duration-300 hover:scale-105 cursor-default" style={{ color: '#1E1B18' }}>Lokalizacje i harmonogram</h2>
           <div className="grid lg:grid-cols-4 gap-8">
             <div className="lg:col-span-1">
               <div className="space-y-4 sticky top-24">
@@ -358,7 +358,7 @@ export default function StrefaGimnastyki() {
       {/* Kadra */}
       <section id="kadra" className="py-20 px-6 bg-orange-100/30">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-6xl font-bold text-center mb-16 transition-all duration-300 hover:scale-105 cursor-default" style={{ color: '#1E1B18' }}>Nasi trenerzy</h2>
+          <h2 className="text-5xl md:text-6xl font-bold text-center mb-16 transition-all duration-300 hover:scale-105 cursor-default" style={{ color: '#1E1B18' }}>Nasi trenerzy</h2>
           <div className="grid md:grid-cols-2 gap-12">
             <div className="bg-white/80 backdrop-blur-sm p-8 rounded-xl border border-orange-200/50 hover:border-orange-300/60 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-[1.02] hover:-translate-y-1">
               <div className="mb-6">
@@ -411,7 +411,7 @@ export default function StrefaGimnastyki() {
       {/* Dodatkowe usługi */}
       <section id="uslugi" className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-6xl font-bold mb-16" style={{ color: '#1E1B18' }}>Dodatkowe usługi</h2>
+          <h2 className="text-5xl md:text-6xl font-bold mb-16" style={{ color: '#1E1B18' }}>Dodatkowe usługi</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div
               
@@ -448,7 +448,7 @@ export default function StrefaGimnastyki() {
       {/* Galeria */}
       <section id="galeria" className="py-20 px-6 bg-yellow-100/40">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-6xl font-bold mb-16" style={{ color: '#1E1B18' }}>Galeria</h2>
+          <h2 className="text-5xl md:text-6xl font-bold mb-16" style={{ color: '#1E1B18' }}>Galeria</h2>
           <div className="grid md:grid-cols-3 gap-6 mb-12">
             <div
               
@@ -512,7 +512,7 @@ export default function StrefaGimnastyki() {
       {/* Zapisy */}
       <section id="zapisy" className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-6xl font-bold mb-16" style={{ color: '#1E1B18' }}>Zapisy na zajęcia</h2>
+          <h2 className="text-5xl md:text-6xl font-bold mb-16" style={{ color: '#1E1B18' }}>Zapisy na zajęcia</h2>
           <div className="bg-gradient-to-br from-stone-50/90 to-zinc-100/80 backdrop-blur-sm p-8 rounded-xl border border-stone-200/50 max-w-2xl mx-auto shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.01]">
             <Phone className="h-16 w-16 text-gym-orange mx-auto mb-8 transition-all duration-300 hover:scale-110 hover:rotate-6" />
             <h3 className="text-2xl font-bold mb-6 text-zinc-700">Wyślij SMS na numer</h3>
