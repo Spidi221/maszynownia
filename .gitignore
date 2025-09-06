@@ -11,3 +11,4 @@ node_modules/
 *.temp
 *.zip
 dist/
+gh_*/
