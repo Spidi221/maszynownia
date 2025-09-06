@@ -34,23 +34,23 @@ export default function Home() {
           <div className="absolute inset-0 gradient-overlay-ems pointer-events-none"></div>
           
           {/* Content Container */}
-          <div className="relative z-10 text-center w-full mx-auto px-4 lg:px-6 flex flex-col h-full justify-center items-center gap-4 lg:gap-6 min-w-0">
-            {/* Logo Section - Bigger on mobile */}
-            <div className="flex-shrink-0 flex flex-col justify-center items-center w-full">
+          <div className="relative z-10 text-center w-full mx-auto px-4 lg:px-6 flex flex-col h-full justify-center items-center gap-3 lg:gap-6 min-w-0">
+            {/* Logo Section - Visible on all devices with mobile-optimized sizing */}
+            <div className="flex-shrink-0 h-2/5 flex flex-col justify-end items-center pb-2 lg:pb-4 w-full">
               <div className="w-full flex justify-center items-center min-w-0">
                 <img 
                   src={logoEms} 
                   alt="Maszynownia EMS" 
                   width={560} 
                   height={224}
-                  className="w-48 lg:h-32 lg:w-auto logo-hover max-w-full object-contain" 
+                  className="h-12 lg:h-32 w-auto logo-hover max-w-full object-contain" 
                   loading="eager"
                 />
               </div>
             </div>
 
             {/* Content Section */}
-            <div className="flex flex-col justify-center items-center gap-4 lg:gap-4">
+            <div className="flex-1 h-3/5 flex flex-col justify-start items-center pt-3 lg:pt-4 gap-3 lg:gap-4">
               <Link href="/ems" className="flex-shrink-0">
                 <button className="btn-ems text-base lg:text-xl px-6 py-3 lg:px-8 lg:py-4" data-testid="button-ems-cta">
                   SPRAWDŹ EMS
@@ -74,23 +74,23 @@ export default function Home() {
           <div className="absolute inset-0 gradient-overlay-gym pointer-events-none"></div>
           
           {/* Content Container */}
-          <div className="relative z-10 text-center w-full mx-auto px-4 lg:px-6 flex flex-col h-full justify-center items-center gap-4 lg:gap-6 min-w-0">
-            {/* Logo Section - Bigger on mobile */}
-            <div className="flex-shrink-0 flex flex-col justify-center items-center w-full">
+          <div className="relative z-10 text-center w-full mx-auto px-4 lg:px-6 flex flex-col h-full justify-center items-center gap-3 lg:gap-6 min-w-0">
+            {/* Logo Section - Visible on all devices with mobile-optimized sizing */}
+            <div className="flex-shrink-0 h-2/5 flex flex-col justify-end items-center pb-2 lg:pb-4 w-full">
               <div className="w-full flex justify-center items-center min-w-0">
                 <img 
                   src={logoStrefa} 
                   alt="Strefa Gimnastyki" 
                   width={240} 
                   height={96}
-                  className="w-40 lg:h-24 lg:w-auto logo-hover max-w-full object-contain logo-strefa-fixed-20250104"
+                  className="h-16 lg:h-24 w-auto logo-hover max-w-full object-contain logo-strefa-fixed-20250104"
                   loading="eager"
                 />
               </div>
             </div>
 
             {/* Content Section */}
-            <div className="flex flex-col justify-center items-center gap-4 lg:gap-4">
+            <div className="flex-1 h-3/5 flex flex-col justify-start items-center pt-3 lg:pt-4 gap-3 lg:gap-4">
               <Link href="/strefagimnastyki" className="flex-shrink-0">
                 <button className="btn-gym text-base lg:text-xl px-6 py-3 lg:px-8 lg:py-4" data-testid="button-gym-cta">
                   SPRAWDŹ ZAJĘCIA
